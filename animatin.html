@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation Example</title>
+  <style>
+    /* Basic styling for the box */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      position: relative;
+      margin: 50px auto;
+    }
+
+    /* Define the animation */
+    @keyframes moveRight {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: calc(100% - 100px); /* Move to the right edge of the container */
+      }
+    }
+
+    /* Apply the animation to the box */
+    .box {
+      animation: moveRight 3s linear infinite;
+    }
+
+    /* Advanced animation: Rotate and change color */
+    @keyframes rotateAndColor {
+      0% {
+        transform: rotate(0deg);
+        background-color: #3498db;
+      }
+      50% {
+        transform: rotate(180deg);
+        background-color: #e74c3c;
+      }
+      100% {
+        transform: rotate(360deg);
+        background-color: #3498db;
+      }
+    }
+
+    /* Apply the advanced animation on hover */
+    .box:hover {
+      animation: rotateAndColor 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
